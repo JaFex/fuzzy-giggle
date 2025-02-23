@@ -6,7 +6,7 @@
 pre-push:
   jobs:
     - name: test
-      run: yarn test
+      run: npm run test
        
 #     - name: packages audit
 #       tags:
@@ -24,11 +24,11 @@ pre-commit:
   parallel: true
   jobs:
     - name: eslint
-      run: yarn eslint {staged_files}
+      run: npm run lint {staged_files}
       glob: "*.{js,ts,jsx,tsx}"
     
     - name: prettier
-      run: yarn prettier --check {staged_files}
+      run: npm run format {staged_files}
       glob: "*.{js,ts,jsx,tsx}"
 #
 #     - name: rubocop
