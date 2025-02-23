@@ -22,7 +22,7 @@ pre-commit:
       glob: "*.{js,ts,jsx,tsx}"
 
 commit-msg:
-  commands:
     parallel: true
-    lint-commit-msg:
-      run: npx commitlint --edit
+    jobs:
+      - name: commitlint
+        run: npx commitlint --edit
