@@ -6,7 +6,7 @@
 pre-push:
   jobs:
     - name: test
-      run: npm run test
+      run: npm run test:cov
       glob: "*.{js,ts,jsx,tsx}"
     
        
